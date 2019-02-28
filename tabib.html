@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 250px;
+  background-size: cover;
+  position: relative;
+  margin: 4px 0 0 0;
+  border-radius: 50px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 0px 0 0 0;
+}
+ ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 26px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+    <ul>
+      <li><button onclick=appetizers()>Appetizers</button></li>
+      <li><button onclick=entrees()>Entrees</button></li>
+      <li><button onclick=desserts()>Desserts</button></li>
+    </ul>
+    
+<h1>Food Dynesty</h1>
+<h2>an asian eatery in NYC</h2>
+<div id="fire"></div>
+
+<script>
+appetizerImages = [
+  'url("https://i.ndtvimg.com/i/2016-06/chinese-625_625x350_81466064119.jpg")',
+  'url("http://chinesefood-eye.com/wp-content/uploads/2016/05/Chinese-Pan-Fry-Shrimp-Pot-Stickers.jpg")',
+  'url("https://www.thespruceeats.com/thmb/W7QDNHra63Sa7iryvhfDrxVEbIU=/1500x1000/filters:no_upscale():max_bytes(150000):strip_icc()/easy-appetizer-meatballs-3054462-8-5b3f8e68c9e77c0037cbdeb8.jpg")',
+  ]
+  entreesImages = [
+    'url("http://www.mrsdash.com/sites/default/files/entree-hot.jpg")',
+    'url("http://dk9z3tsf3pvb2.cloudfront.net/wp-content/uploads/2011/09/entree0.jpg")',
+    'url("http://www.performancefoodservice.com/~/media/PFS/Images/Just%20In/Small/just_in_sm_WC_Entrees.jpg")',
+  ]
+  dessertImages = [
+    'url("https://www.oliviascuisine.com/wp-content/uploads/2016/07/brownie-dessert-trifle-IG.jpg")',
+    'url("https://loliviersantafe.com/images/links/41-Dessert.jpg")',
+    'url("https://cdna.artstation.com/p/assets/images/images/005/939/362/large/cgmonkeyking-making-dessert-vray-test04-pn01-pps.jpg?1494862418")',
+  ]
+  AppetizersDivs = [
+			'<div class="item"><p>chicken bbq <span class="price">$14</span><br /><small>Mustard sierra leone bologi. </small></p></div>',
+			'<div class="item"><p>Dumpling with extra spice<span class="price">$22</span><br /><small>Tri-tip capicola kielbasa bresaola. </small></p></div>',
+			'<div class="item"><p>Meatballs<span class="price">$8</span><br /><small>Lollipop ice cream candy canes.</small></p></div>',
+]
+ EntreesDivs = [
+   '<div class="item"><p>Steak <span class="price">$14</span><br /><small>Extra onion with well cooked. </small></p></div>',
+			'<div class="item"><p>sushami <span class="price">$22</span><br /><small>Tri-tip capicola kielbasa bresaola. </small></p></div>',
+			'<div class="item"><p>lasagna <span class="price">$8</span><br /><small>Lollipop ice cream candy canes.</small></p></div>',
+]
+  DessertDivs = [
+    '<div class="item"><p>Chocolate cream cake <span class="price">$14</span><br /><small>Mustard sierra leone bologi. </small></p></div>',
+			'<div class="item"><p>Chocolate caramal pastree <span class="price">$22</span><br /><small>Tri-tip capicola kielbasa bresaola. </small></p></div>',
+			'<div class="item"><p>Melted cake with ice cream<span class="price">$8</span><br /><small>Lollipop ice cream candy canes.</small></p></div>',
+]
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+  function appetizers() {
+    Food = document.getElementById("fire")
+    Food.innerHTML = ''
+	    Food.innerHTML += AppetizersDivs[0]
+    	Food.innerHTML += AppetizersDivs[1]
+    	Food.innerHTML += AppetizersDivs[2]
+
+    //alert ("you are in the appetizers section")
+    items = document.getElementsByClassName("item")
+    items[0].style.background = appetizerImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = appetizerImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = appetizerImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+
+  }
+  function entrees() {
+    Drink = document.getElementById("fire")
+  Drink.innerHTML = ''  
+	Drink.innerHTML += EntreesDivs[0]
+    	Drink.innerHTML += EntreesDivs[1]
+    	Drink.innerHTML += EntreesDivs[2]
+
+    //alert ("you are in the entrees section")
+    items = document.getElementsByClassName("item")
+    items[0].style.background = entreesImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = entreesImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = entreesImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+  }
+  function desserts() {
+    Eat= document.getElementById("fire")
+    Eat.innerHTML = ''
+	Eat.innerHTML += DessertDivs[0]
+    	Eat.innerHTML += DessertDivs[1]
+    	Eat.innerHTML += DessertDivs[2]
+
+    //alert ("you are in the deserts section")
+    items = document.getElementsByClassName("item")
+    items[0].style.background = dessertImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = dessertImages[1]
+    items[1].style.backgroundSize = '100% 100%'
+    items[2].style.background = dessertImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+  }
+</script>
+
+</body>
