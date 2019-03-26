@@ -74,6 +74,7 @@ a {
 
 section {
   padding: 85px 0;
+  background: #2ff699;
 }
 
 .card {
@@ -117,7 +118,7 @@ a:hover {
   background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/05/50/0b/df/nature-beauty-of-cox.jpg);
   background-size: cover;
   padding: 150px 0;
-  color: #fff999;
+  color: #fff779;
   width: 100%;
   height: 100vh;
 }
@@ -129,7 +130,7 @@ a:hover {
   background: rgba(0, 0, 0, 0.65);
   width: 100%;
   height: 100%;
-  left: 0;
+  left: 0;<!DOCTYPE html>
   top: 0;
 }
 
@@ -155,14 +156,14 @@ a:hover {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 26px;
   margin: 45px 0 75px 0;
-  color: #fff666;
+  color: #fff888;
 }
 
 /* ==================================================
   Header Styling
 ================================================== */
 #header {
-  background: #199EB8;
+  background: #199666;
   height: 70px;
 }
 
@@ -463,6 +464,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* ==================================================
   Stats Styling
 ================================================== */
+.about {
+	background: #1ff666;
+}
 .stats-row {
   margin-top: 65px;
 }
@@ -544,8 +548,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 70px;
   height: 70px;
   margin-bottom: 15px;
-  background: #199EB8;
-  color: #fff;
+  background: #599fff;
+  color: #7fff66;
   font-size: 24px;
   text-align: center;
   line-height: 70px;
@@ -554,13 +558,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .feature-col h3 {
-  color: #199EB8;
+  color: #999ff8;
 }
 
 .feature-col p {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #999;
+  color: #ff4563;
 }
 
 /* ==================================================
@@ -594,7 +598,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   Portfolio Styling
   ================================================== */
 .portfolio {
-  background-color: #edf6ff;
+  background-color: #fff777;
   padding-bottom: 0;
 }
 
