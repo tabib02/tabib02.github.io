@@ -6,22 +6,25 @@
 */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'ZCOOL QingKe HuangYou', cursive;
+  
 }
 
 p {
   line-height: 1.55;
   color: #333;
   font-size: 400;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: 'Germania One', cursive;
 }
 
 h1 {
   font-size: 62px;
+  font-family:'Merriweather', serif ;
 }
 
 h2 {
   font-size: 30px;
   margin-bottom: 65px;
+  font-family:'Germania One', cursive;
 }
 
 h3 {
@@ -45,7 +48,7 @@ a {
   Elements
   ================================================== */
 .btn {
-  background-color: #199;
+  background-color: #ff9999;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 800;
   color: #fff;
@@ -54,7 +57,7 @@ a {
 }
 
 .btn:hover {
-  background-color: #0400;
+  background-color: #0ff400;
   color: #fff;
 }
 
@@ -153,7 +156,7 @@ a:hover {
 }
 
 .tagline {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: "Baloo Chettan", cursive;
   font-size: 26px;
   margin: 45px 0 75px 0;
   color: #fff888;
@@ -768,13 +771,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   Contact Section
   ================================================== */
 #contact {
-  background: #f7f7f7;
+  background: #f99999;
   padding: 80px 0;
 }
 
 #contact h2 {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
-  color: #199EB8;
+  color: #00ffff;
 }
 
 #contact .info i {
@@ -789,7 +792,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form #sendmessage {
-  color: #199EB8;
+  color: #ff6666;
   border: 1px solid #199EB8;
   display: none;
   text-align: center;
@@ -827,7 +830,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form button[type="submit"] {
-  background: #199EB8;
+  background: #777fff;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -837,14 +840,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #23c2e1;
+  background: #888888;
 }
 
 /* ==================================================
   Footer Styling
   ================================================== */
 .site-footer {
-  background-color: #111;
+  background-color: #111fff;
   padding: 0;
 }
 
@@ -872,7 +875,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .site-footer .bottom {
-  background-color: #000;
+  background-color: #000fff;
   padding: 20px 0;
 }
 
@@ -886,7 +889,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .site-footer .bottom .list-inline a {
-  color: #fff;
+  color: #fff666;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   margin-right: 15px;
 }
