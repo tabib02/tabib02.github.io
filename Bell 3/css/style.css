@@ -472,6 +472,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 .stats-row {
   margin-top: 65px;
+  background-color: #f44;
+  
 }
 
 .stats-col .circle {
@@ -480,7 +482,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 160px;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: 500;
-  color: #666;
+  color: #11ff66;
   border: 6px solid #199EB8;
   border-radius: 50%;
   padding: 55px 25px 0 25px;
@@ -488,7 +490,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .stats-col .circle .stats-no {
-  color: #fff;
+  color: #333ff6;
   width: 70px;
   height: 70px;
   line-height: 70px;
@@ -496,7 +498,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   right: -15px;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  background-color: #E04F00;
+  background-color: #F00;
   position: absolute;
   border-radius: 50%;
   font-weight: 700;
